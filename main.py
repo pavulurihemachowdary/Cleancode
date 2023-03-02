@@ -43,7 +43,7 @@ col1, col2 = st.columns(2,gap="large")
 
 with col1:
     # Get code input from user
-    code_input = st.text_area('Enter your Python code here:', '')
+    code_input = st.text_area('Enter your Python code here:', height=350)
 
     # Initialize score and error message list
     score = 10
@@ -97,7 +97,8 @@ with col1:
             st.success(u'\u2713'+'\t\tYour code meets all Python code standards!')
         else:
             error_message = ' '.join(error_msgs)
-            st.warning(f'Your code does not meet these Python code standards.\t\t Score: {score}/10.')
+            st.markdown(f"### Score : **{score}**/10")
+            st.warning(f'Your code does not meet these Python code standards.')
             st.warning(f'{error_message}')
     else:
         st.warning('Please enter some code to check.')
