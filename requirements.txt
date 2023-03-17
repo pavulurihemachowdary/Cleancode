@@ -1,6 +1,6 @@
-Streamlit
-Pandas
-Numpy
-Pickle
-Pycodestyle
-Scikit-learn
+streamlit
+pandas
+numpy
+pickle
+pycodestyle
+scikit-learn
