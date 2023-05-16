@@ -43,7 +43,8 @@ col1, col2 = st.columns(2,gap="large")
 
 with col1:
     # Get code input from user
-    code_input = st.text_area('Enter your Python code here:', height=350)
+    options = st.selectbox('Select a Programming Language(#Default : Python) :',('Python', 'HTML','CSS','JavaScript'))
+    code_input = st.text_area('Enter your code here:', height=350)
 
     # Initialize score and error message list
     score = 10
