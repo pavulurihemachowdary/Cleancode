@@ -44,7 +44,8 @@ col1, col2 = st.columns(2,gap="large")
 with col1:
     # Get code input from user
     options = st.selectbox('Select a Programming Language(#Default : Python) :',('Python', 'HTML','CSS','JavaScript'))
-    st.warning('Web languages are disabled due to the server conflit in the streamlit cloud.', icon="🚨")
+    if options != 'Python':
+        st.warning('Web languages are disabled due to the server conflit in the streamlit cloud.', icon="🚨")
     code_input = st.text_area('Enter your code here:', height=350)
 
     # Initialize score and error message list
