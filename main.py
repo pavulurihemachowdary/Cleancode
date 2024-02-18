@@ -209,6 +209,14 @@ if __name__ == "__main__":
                 score -= java_score
                 error_msgs.extend(java_errors)
 
+            if score == 10:
+                st.success(u'\u2713' + '\t\tYour code meets all code standards!')
+            else:
+                error_message = ' '.join(error_msgs)
+                st.markdown(f"### Score : **{score}**/10")
+                st.warning(f'Your code does not meet these code standards.')
+                st.warning(f'{error_message}')
+
         else:
             st.warning('Please enter some code to check.')
 
@@ -223,3 +231,4 @@ if __name__ == "__main__":
                 st.write('Snippet ID:', snippet_id)
                 st.code(code_snippet)
                 st.write()
+
